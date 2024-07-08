@@ -1,13 +1,8 @@
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import React from 'react';
-import Carousel from 'react-native-reanimated-carousel';
 import {DEVICE_WIDTH} from '../helpers/Dimensions';
-import {COLORS, FONTFAMILY} from '../theme/theme';
-import {
-  responsiveHeight,
-  responsiveWidth,
-  responsiveFontSize,
-} from 'react-native-responsive-dimensions';
+import {COLORS} from '../theme/theme';
+
 import HomeHeader from '../components/HomeHeader';
 import SearchBar from '../components/SearchBar';
 import SearchBar2 from '../components/SearchBar2';
@@ -18,6 +13,7 @@ import ProductList from '../components/ProductList';
 import CustomBottomSheet from '../components/CustomBottomSheet';
 import ProductVariant from '../components/ProductVariant';
 import CircularSlider from '../components/CircularSlider';
+import CarouselHorizontal from '../components/CarouselHorizontal';
 
 const Home = () => {
   const width = DEVICE_WIDTH;
@@ -25,8 +21,9 @@ const Home = () => {
     <View style={styles.container}>
       <HomeHeader />
       <SearchBar2 />
-      {/* <CircularSlider /> */}
-      <HorizontalImageSlider1 />
+      {/* <CarouselHorizontal /> */}
+      <CircularSlider />
+      {/* <HorizontalImageSlider1 /> */}
       <HorizontalProductSlider />
 
       {/* <HomeTop6Category /> */}
